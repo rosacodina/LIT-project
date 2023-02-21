@@ -4,10 +4,22 @@ export class EitCounter extends LitElement {
   static styles = [
     css`
       :host {
-        display: block;
+        display: inline-block;
+        padding: 1em;
+        border: 1px solid #ccc;
       }
       h2 {
         color: red;
+      }
+      .paragraph {
+        color: blue;
+        font-size: 1.5em;
+      }
+
+      @media (min-width: 500px) {
+        .paragraph {
+          font-size: 3em;
+        }
       }
     `,
   ];
@@ -20,7 +32,7 @@ export class EitCounter extends LitElement {
 
   constructor() {
     super();
-    this.counter = 0;
+    this.counter = 10;
   }
 
   render() {
