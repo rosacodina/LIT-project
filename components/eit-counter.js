@@ -39,7 +39,12 @@ export class EitCounter extends LitElement {
     return html`
       <h2>My counter</h2>
       <p class="paragraph">${this.counter}</p>
+      <button @click=${this.increment}>+1</button>
     `;
+  }
+
+  increment() {
+    this.counter++;
   }
 }
 customElements.define('eit-counter', EitCounter);
